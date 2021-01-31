@@ -1,0 +1,88 @@
+body{
+    overflow: hidden;
+    height: 100vh;
+    margin:0;
+}
+
+.container{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow:hidden;
+}
+.split.left{
+    left:0;
+    background: url(contBcg-0.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.right{
+    right:0;
+    background: url(contBcg-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left:50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.btn{
+    position: absolute;
+    left: 50%;
+    top:60%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    width: 15rem;
+    padding: 1.5rem;
+    border: #fff solid 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.split.left::before{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87,84,236,0.6);
+}
+.split.right::before{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43,43,43,0.8);
+}
+
+.split.left,.split.right,.split.left::before,.split.right::before{
+    transition: all 1s ease-in;
+}
+.hover-left .left{
+    width:75%;
+}
+.hover-left .right{
+    width:25%;
+}
+.hover-right .left{
+    width:25%;
+}
+.hover-right .right{
+    width:75%;
+}
